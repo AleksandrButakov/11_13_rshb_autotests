@@ -2,6 +2,7 @@ plugins {
     id 'java'
 }
 
+
 group 'ru.anbn.rshb'
 version '1.0'
 
