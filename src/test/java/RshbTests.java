@@ -103,4 +103,36 @@ public class RshbTests {
         });
     }
 
+    @Test
+    @DisplayName("Checking the link to farmers")
+    void checkingLinkFarmers() {
+        step("- Проверка ссылки «Фермерам»", () -> {
+            homePage.clickLinkFarmers();
+        });
+    }
+
+    @Test
+    @DisplayName("Checking the link to small business")
+    void checkingLinkSmallBusiness() {
+        step("- Проверка ссылки «Малому бизнесу и ИП»", () -> {
+            homePage.clickLinkSmallBusiness();
+        });
+    }
+
+    @Test
+    @DisplayName("Checking a false link number one")
+    void checkingFalseLink01() {
+        step("- Проверка ложной ссылки №1", () -> {
+            homePage.clickLinkFail1();
+        });
+    }
+
+    @Test
+    @DisplayName("Checking a false link number two")
+    void checkingFalseLink02() {
+        step("- Проверка ложной ссылки №1", () -> {
+            homePage.clickLinkFail2();
+        });
+    }
+
 }
