@@ -40,3 +40,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+!notifications/allure-notifications-3.1.2.jar
