@@ -1,5 +1,5 @@
-# Проект по автоматизации тестирования для Acron
-## <a target="_blank" href="https://www.acron.ru/">Веб сайт Acron</a>
+# Проект по автоматизации тестирования для РСХБ
+## <a target="_blank" href="https://www.rshb.ru/">Веб сайт rshb</a>
 
 ## :shinto_shrine: Содержание:
 
