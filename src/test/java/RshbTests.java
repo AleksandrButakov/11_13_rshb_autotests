@@ -1,4 +1,3 @@
-import com.codeborne.selenide.CheckResult;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -10,7 +9,6 @@ import pages.HomePage;
 import pages.Individuals;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
@@ -24,6 +22,10 @@ public class RshbTests {
     // variables
     private int
             loanAmount = 2010000;
+
+    private String
+            loanPeriod = "60",
+            preliminaryCalculation = "55 400 ₽";
 
     @BeforeAll
     static void beforeAll() {
@@ -70,8 +72,16 @@ public class RshbTests {
             creditForAnyPurpose.choosingLoanAmount(loanAmount);
         });
 
+        step("- Срок кредита 60 м", () -> {
+            creditForAnyPurpose.choosingLoanPeriod(loanPeriod);
+        });
 
-        sleep(5000);
+        step("- проверить что значение поля 'Предварительный расчет' составляет 55 400 ₽", () -> {
+            creditForAnyPurpose.checkValuePreliminaryCalculationField(preliminaryCalculation);
+        });
+
+
+        //sleep(5000);
         // checking the correctness of the entered value
 
 

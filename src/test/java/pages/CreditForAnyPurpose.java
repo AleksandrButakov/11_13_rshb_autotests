@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -16,9 +17,8 @@ public class CreditForAnyPurpose {
     private SelenideElement
             buttonCloseCookiesWindow = $(".cookie-consent__submit-button"),
             buttonAnnuityPayment = $(".menu-switch__item"),
-
-    sliderLoanAmount = $(".ant-slider-handle"),
-            loanTermWindow = $$("[inputmode='numeric']").get(1),
+            sliderLoanAmount = $(".ant-slider-handle"),
+            loanPeriodWindow = $$("[inputmode='numeric']").get(1),
             preliminaryCalculation = $(".loan-calculator-result__value");
 
     public void closeCookiesWindow() {
@@ -51,6 +51,16 @@ public class CreditForAnyPurpose {
                 sm = Integer.parseInt(s1);
             }
         }
+    }
+
+    public void choosingLoanPeriod(String loanPerion) {
+        loanPeriodWindow.clear();
+        loanPeriodWindow.sendKeys(loanPerion);
+    }
+
+    public void checkValuePreliminaryCalculationField(String preliminaryCalculation) {
+        //preliminaryCalculation.shouldHave(text(loanPeriodWindow));
+        this.preliminaryCalculation.shouldHave(text(preliminaryCalculation));
     }
 
     // we will select only numbers from the field by removing formatting characters
