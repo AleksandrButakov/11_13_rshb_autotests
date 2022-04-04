@@ -1,8 +1,9 @@
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.Attach;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.CreditForAnyPurpose;
 import pages.Credits;
 import pages.HomePage;
@@ -29,9 +30,29 @@ public class RshbTests {
 
     @BeforeAll
     static void beforeAll() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
         baseUrl = "https://rshb.ru";
         Configuration.browserPosition = ("0x0");
         Configuration.browserSize = "1920x1080";
+
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+        /* Jenkins не имеет графического интерфейса поэтому для тестирования web интерфейса необходимо
+           подключить selenoid
+         */
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
+    }
+
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 
     @AfterAll
@@ -76,15 +97,10 @@ public class RshbTests {
             creditForAnyPurpose.choosingLoanPeriod(loanPeriod);
         });
 
+        // checking the correctness of the entered value
         step("- проверить что значение поля 'Предварительный расчет' составляет 55 400 ₽", () -> {
             creditForAnyPurpose.checkValuePreliminaryCalculationField(preliminaryCalculation);
         });
-
-
-        //sleep(5000);
-        // checking the correctness of the entered value
-
-
     }
 
 }
