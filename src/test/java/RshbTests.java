@@ -47,17 +47,24 @@ public class RshbTests {
         Configuration.browserCapabilities = capabilities;
     }
 
+    @BeforeEach
+    void beforeEachMethod() {
+        open(baseUrl);
+    }
+
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        closeWebDriver();
     }
 
     @AfterAll
+    @Disabled
     static void afterAll() {
-        closeWebDriver();
+
     }
 
     @Test
