@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class RshbTests {
+public class RshbTests extends TestBase {
 
     HomePage homePage = new HomePage();
     Individuals individuals = new Individuals();
