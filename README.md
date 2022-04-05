@@ -1,5 +1,5 @@
 # Проект по автоматизации тестирования для Россельхозбанка
-## <a target="_blank" href="https://www.rshb.ru/">Веб сайт rshb</a>
+## <a target="_blank" href="https://www.rshb.ru/">Веб сайт https://rshb.ru</a>
 
 ## :shinto_shrine: Содержание:
 
