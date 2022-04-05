@@ -87,7 +87,7 @@ test
 
 ## :shinto_shrine: Отчет в Telegram
 <p align="center">
-<img title="Telegram notification message" src="D:\Docum\Java_IDEA\QaGuru\11_13_rshb_autotests\images\screenshots\telegram-notification.png">
+<img title="Telegram notification message" src="images/screenshots/telegram-notification.png">
 </p>
 
 ## :shinto_shrine: Видео примеры прохождения тестов
