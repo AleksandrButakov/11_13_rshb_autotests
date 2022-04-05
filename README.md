@@ -46,12 +46,9 @@
 Сборка в Jenkins
 
 - browser (браузер, по умолчанию chrome)
-- version (версия браузера, по умолчанию 91.0)
-- size (размер окна браузера, по умолчанию 1920x1080)
 - remoteUrl (адрес удаленного сервера selenoid)
 - user (пользователль удаленного сервера selenoid)
 - password (пароль от удаленного сервера selenoid)
-- threads (количество потоков)
 
 ## :shinto_shrine: Запуск из терминала
 Локальный запуск:
@@ -67,9 +64,6 @@ test
 -Dpassword=${PASSWORD}
 -Dbrowser=${BROWSER}
 -DremoteBrowser=${REMOTE_BROWSER}
--Dversion=${VERSION}
--Dsize=${BROWSER_SIZE}
--Dthreads=${THREADS}
 ```
 
 ## :shinto_shrine: Allure отчет
