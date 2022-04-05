@@ -27,7 +27,7 @@ java \
 
 // Jenkins
 java \
-"-DprojectName=${PROJECT_NAME}" \
+"-DprojectName=Testing the https://rshb.ru service" \
 "-Denv=${ENVIRONMENT}" \
 "-DreportLink=${BUILD_URL}" \
 "-Dcomm=Any comment here" \
