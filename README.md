@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования для РСХБ
+# Проект по автоматизации тестирования для Россельхозбанка
 ## <a target="_blank" href="https://www.rshb.ru/">Веб сайт rshb</a>
 
 ## :shinto_shrine: Содержание:
@@ -85,26 +85,9 @@ test
 <img title="Allure Test Page" src="images/screenshots/allure-test-page.png">
 </p>
 
-## :shinto_shrine: Интеграция с Allure TestOps
-- ### Экран с результатами запуска тестов
-<p align="center">
-<img title="TestOps Launch Page" src="images/screenshots/test-ops-launch-page.png">
-</p>
-
-- ### Страница с тестами в TestOps
-<p align="center">
-<img title="TestOps tests page" src="images/screenshots/test-ops-tests-page.png">
-</p>
-
-## :shinto_shrine: Интеграция с Jira
-- ### Страница с задачей в Jira
-<p align="center">
-<img title="Jira issue" src="images/screenshots/jira-issue.png">
-</p>
-
 ## :shinto_shrine: Отчет в Telegram
 <p align="center">
-<img title="Telegram notification message" src="images/screenshots/telegram-notification.png">
+<img title="Telegram notification message" src="D:\Docum\Java_IDEA\QaGuru\11_13_rshb_autotests\images\screenshots\telegram-notification.png">
 </p>
 
 ## :shinto_shrine: Видео примеры прохождения тестов
