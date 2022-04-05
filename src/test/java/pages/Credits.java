@@ -13,7 +13,6 @@ public class Credits {
 
     public void clickCreditForAnyPurpose() {
         linkCreditForAnyPurpose.click();
-
     }
 
 }
