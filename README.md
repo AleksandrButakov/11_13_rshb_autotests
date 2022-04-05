@@ -8,8 +8,6 @@
 - <a href="#shinto_shrine-сборка-в-Jenkins">Сборка в Jenkins</a>
 - <a href="#shinto_shrine-запуск-из-терминала">Запуск из терминала</a>
 - <a href="#shinto_shrine-allure-отчет">Allure отчет</a>
-- <a href="#shinto_shrine-интеграция-с-allure-testops">Интеграция с Allure TestOps</a>
-- <a href="#shinto_shrine-интеграция-с-jira">Интеграция с Jira</a>
 - <a href="#shinto_shrine-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#shinto_shrine-видео-примеры-прохождения-тестов">Видео примеры прохождения тестов</a>
 
