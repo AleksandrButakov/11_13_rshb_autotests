@@ -36,7 +36,10 @@ public class RshbTests {
         Configuration.browserPosition = ("0x0");
         Configuration.browserSize = "1920x1080";
 
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        //password and user for remote browser
+        String user = System.getProperty("user");
+        String password = System.getProperty("password");
+        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
 
         /* Jenkins не имеет графического интерфейса поэтому для тестирования web интерфейса необходимо
            подключить selenoid
